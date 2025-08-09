@@ -26,6 +26,8 @@ export function Header() {
     { href: '#contact', label: 'Contact Us' },
   ]
 
+  const phoneNumber = '7068178070'
+
   return (
     <motion.header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -80,15 +82,18 @@ export function Header() {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <div className="flex items-center text-sm text-muted-foreground bg-muted/50 px-3 py-1 rounded-full">
+            <a 
+              href={`tel:+91${phoneNumber}`}
+              className="flex items-center text-sm text-muted-foreground bg-muted/50 px-3 py-1 rounded-full hover:bg-primary/10 hover:text-primary transition-all duration-300 cursor-pointer"
+            >
               <Phone className="h-4 w-4 mr-2 text-primary" />
-              <span className="font-medium">7068178070</span>
-            </div>
+              <span className="font-medium">{phoneNumber}</span>
+            </a>
             <ThemeToggle />
             <Button 
               size="sm" 
               className="shadow-lg hover:shadow-xl transition-all duration-300"
-              onClick={() => window.open(`https://wa.me/917068178070?text=Hi, I need help with my appliance`, '_blank')}
+              onClick={() => window.open(`https://wa.me/91${phoneNumber}?text=Hi, I need help with my appliance`, '_blank')}
             >
               <MessageCircle className="h-4 w-4 mr-2" />
               WhatsApp
@@ -160,11 +165,17 @@ export function Header() {
                 ))}
                 <div className="pt-3 border-t">
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center text-sm text-muted-foreground">
+                    <a 
+                      href={`tel:+91${phoneNumber}`}
+                      className="flex items-center text-sm text-muted-foreground hover:text-primary transition-colors"
+                    >
                       <Phone className="h-4 w-4 mr-2 text-primary" />
-                      <span>7068178070</span>
-                    </div>
-                    <Button size="sm" onClick={() => window.open(`https://wa.me/917068178070`, '_blank')}>
+                      <span>{phoneNumber}</span>
+                    </a>
+                    <Button 
+                      size="sm" 
+                      onClick={() => window.open(`https://wa.me/91${phoneNumber}`, '_blank')}
+                    >
                       WhatsApp
                     </Button>
                   </div>

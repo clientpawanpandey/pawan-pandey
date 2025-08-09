@@ -619,7 +619,7 @@ export default function AdminPage() {
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value as any)}
-            className="px-3 py-2 rounded-md border border-input bg-background text-sm min-w-[120px]"
+            className="px-3 py-2 rounded-md border border-input bg-background text-sm min-w-[120px] bg-black/20"
           >
             <option value="all">All Status</option>
             <option value="pending">Pending</option>
