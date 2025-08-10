@@ -109,7 +109,7 @@ export function About() {
             className="space-y-6"
           >
             <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-              Why Choose Pawan Pandey's MCS?
+              Why Choose Gorakhpur's MCS?
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
               We understand how important your home appliances are to your daily life. That's why we're 

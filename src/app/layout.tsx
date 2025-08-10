@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pawan Pandey - Machine Care Services",
+  title: "Gorakhpur - Machine Care Services",
   description: "Professional appliance repair, installation and maintenance services for refrigerators, washing machines, microwaves, and air conditioners.",
 };
 

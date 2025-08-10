@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react'
 import Link from 'next/link'
 import { Phone, MessageCircle, MapPin, Star, Clock, Shield, Wrench, Mail, ExternalLink } from 'lucide-react'
 import { Badge } from './ui/badge'
@@ -47,7 +48,7 @@ export function Footer() {
                   <Wrench className="h-7 w-7 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-black text-foreground">Pawan Pandey</h3>
+                  <h3 className="text-2xl font-black text-foreground">Gorakhpur Services</h3>
                   <Badge variant="secondary" className="text-xs font-medium">Machine Care Services</Badge>
                 </div>
               </div>
@@ -196,7 +197,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-center md:text-left">
               <p className="text-muted-foreground text-sm">
-                &copy; 2025 Pawan Pandey - Machine Care Services. All rights reserved.
+                &copy; 2025 Gorakhpur - Machine Care Services. All rights reserved.
               </p>
               <p className="text-muted-foreground text-xs mt-1">
                 Professional appliance repair services with guaranteed satisfaction

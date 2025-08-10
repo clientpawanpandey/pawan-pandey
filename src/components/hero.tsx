@@ -151,7 +151,7 @@ export function Hero() {
             className="mb-8"
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight mb-4">
-              <span className="block text-foreground mb-2">Pawan Pandey</span>
+              <span className="block text-foreground mb-2">Gorakhpur</span>
               <span className="block">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-600 to-pink-600 animate-pulse">
                   Machine Care

@@ -52,7 +52,7 @@ export function Header() {
                 <Wrench className="h-6 w-6 text-white" />
               </div>
               <div className="hidden sm:block">
-                <div className="text-xl font-bold text-foreground">Pawan Pandey</div>
+                <div className="text-xl font-bold text-foreground">Gorakhpur</div>
                 <div className="text-xs text-primary font-semibold">MCS</div>
               </div>
             </Link>
