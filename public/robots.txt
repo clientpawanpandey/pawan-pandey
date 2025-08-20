@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.gorakhpurservices.in.net
+
+# Sitemaps
+Sitemap: https://www.gorakhpurservices.in.net/sitemap.xml
