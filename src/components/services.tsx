@@ -10,8 +10,8 @@ import { CheckCircle, Clock, Shield, Wrench, Star, Award, MessageCircle, ArrowRi
 export function Services() {
   const services = [
     {
-      title: 'Refrigerator',
-      subtitle: 'Cooling Solutions',
+      title: 'Refrigerator Service',
+      subtitle: 'Cooling Solutions', 
       description: 'MCS is one stop solutions related to refrigerator such as refrigerator repair services, installation and maintenance. We are refrigerator expert offering local refrigerator services.',
       mobileImage: '/assets/refrigeratormobile.jpg',
       landscapeImage: '/assets/refrigeratorlanscape.jpg',
@@ -19,14 +19,24 @@ export function Services() {
       price: 'Book Fast',
       color: 'from-blue-500 to-cyan-600',
       bgColor: 'bg-blue-50 dark:bg-blue-950/20',
-      // Fixed dimensions - refrigerator landscape is actually 816x1224 (portrait)
-      dimensions: { 
-        mobile: { width: 816, height: 1224, aspectRatio: '2/3' }, 
-        landscape: { width: 816, height: 1224, aspectRatio: '2/3' } 
+      category: 'Refrigerator',
+      // SEO optimized alt texts
+      altText: {
+        mobile: 'Professional Refrigerator Repair Service - Gorakhpur MCS',
+        landscape: 'Expert Refrigerator Installation and Maintenance Services'
+      },
+      // Structured data for SEO
+      structuredData: {
+        '@type': 'Service',
+        name: 'Refrigerator Repair Service',
+        provider: 'Gorakhpur Machine Care Services',
+        description: 'Professional refrigerator repair, installation and maintenance services',
+        serviceType: 'Home Appliance Repair',
+        areaServed: 'Gorakhpur, Uttar Pradesh, India'
       }
     },
     {
-      title: 'Washing Machine',
+      title: 'Washing Machine Service',
       subtitle: 'Laundry Care',
       description: 'MCS is one stop solutions related to washing machines such as washing machine repair services, installation and maintenance. We are washing machine expert offering local washing machine services.',
       mobileImage: '/assets/washingmachinemobile.jpg',
@@ -35,13 +45,22 @@ export function Services() {
       price: 'Book Fast',
       color: 'from-green-500 to-emerald-600',
       bgColor: 'bg-green-50 dark:bg-green-950/20',
-      dimensions: { 
-        mobile: { width: 816, height: 1224, aspectRatio: '2/3' }, 
-        landscape: { width: 816, height: 1224, aspectRatio: '2/3' } 
+      category: 'Washing Machine',
+      altText: {
+        mobile: 'Expert Washing Machine Repair Service - Gorakhpur MCS',
+        landscape: 'Professional Washing Machine Installation and Repair'
+      },
+      structuredData: {
+        '@type': 'Service',
+        name: 'Washing Machine Repair Service',
+        provider: 'Gorakhpur Machine Care Services', 
+        description: 'Expert washing machine repair, installation and maintenance services',
+        serviceType: 'Home Appliance Repair',
+        areaServed: 'Gorakhpur, Uttar Pradesh, India'
       }
     },
     {
-      title: 'Microwave Oven',
+      title: 'Microwave Oven Service',
       subtitle: 'Kitchen Appliance',
       description: 'MCS is one stop solutions related to microoven such as microwave oven repair services, installation and maintenance etc. We are microwave oven expert providing local microwave oven services.',
       mobileImage: '/assets/microwavemobile.jpg',
@@ -50,13 +69,22 @@ export function Services() {
       price: 'Book Fast',
       color: 'from-purple-500 to-pink-600',
       bgColor: 'bg-purple-50 dark:bg-purple-950/20',
-      dimensions: { 
-        mobile: { width: 816, height: 1224, aspectRatio: '2/3' }, 
-        landscape: { width: 1224, height: 816, aspectRatio: '3/2' } 
+      category: 'Microwave Oven',
+      altText: {
+        mobile: 'Professional Microwave Oven Repair - Gorakhpur MCS',
+        landscape: 'Expert Microwave Installation and Service'
+      },
+      structuredData: {
+        '@type': 'Service',
+        name: 'Microwave Oven Repair Service',
+        provider: 'Gorakhpur Machine Care Services',
+        description: 'Professional microwave oven repair, installation and maintenance services',
+        serviceType: 'Home Appliance Repair',
+        areaServed: 'Gorakhpur, Uttar Pradesh, India'
       }
     },
     {
-      title: 'Air Conditioner',
+      title: 'Air Conditioner Service',
       subtitle: 'Climate Control',
       description: 'MCS is one stop solutions related to air conditioners such as air conditioner repair services, installation and maintenance etc. We are air conditioners expert providing local air conditioner services.',
       mobileImage: '/assets/acmobile.jpg',
@@ -65,9 +93,18 @@ export function Services() {
       price: 'Book Fast',
       color: 'from-orange-500 to-red-600',
       bgColor: 'bg-orange-50 dark:bg-orange-950/20',
-      dimensions: { 
-        mobile: { width: 1224, height: 816, aspectRatio: '3/2' }, 
-        landscape: { width: 1224, height: 816, aspectRatio: '3/2' } 
+      category: 'Air Conditioner',
+      altText: {
+        mobile: 'Professional AC Repair Service - Gorakhpur MCS',
+        landscape: 'Expert Air Conditioner Installation and Gas Filling Service'
+      },
+      structuredData: {
+        '@type': 'Service',
+        name: 'Air Conditioner Repair Service',
+        provider: 'Gorakhpur Machine Care Services',
+        description: 'Professional AC repair, installation, gas filling and maintenance services',
+        serviceType: 'Home Appliance Repair',
+        areaServed: 'Gorakhpur, Uttar Pradesh, India'
       }
     },
   ]
@@ -109,8 +146,64 @@ export function Services() {
     }
   }
 
+  // Generate structured data for SEO
+  const generateServiceStructuredData = () => {
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      name: 'Gorakhpur Machine Care Services',
+      url: 'https://gorakhpur-mcs.com',
+      description: 'Professional appliance repair services in Gorakhpur - refrigerator, washing machine, microwave, and air conditioner repair with same-day service',
+      telephone: '+91-7068178070',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Gorakhpur',
+        addressRegion: 'Uttar Pradesh',
+        addressCountry: 'India'
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: '26.7606',
+        longitude: '83.3732'
+      },
+      openingHours: 'Mo-Su 00:00-23:59',
+      serviceArea: {
+        '@type': 'Place',
+        name: 'Gorakhpur and surrounding areas'
+      },
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Home Appliance Repair Services',
+        itemListElement: services.map((service, index) => ({
+          '@type': 'Offer',
+          position: index + 1,
+          itemOffered: service.structuredData
+        }))
+      },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.9',
+        reviewCount: '1000',
+        bestRating: '5',
+        worstRating: '1'
+      }
+    }
+    
+    return (
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData)
+        }}
+      />
+    )
+  }
+
   return (
     <section id="services" className="py-20 relative overflow-hidden">
+      {/* SEO Structured Data */}
+      {generateServiceStructuredData()}
+      
       {/* Enhanced Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -130,19 +223,19 @@ export function Services() {
           <Badge variant="outline" className="mb-4 px-6 py-2 text-base font-semibold border-primary/30">
             Our Services
           </Badge>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-6">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-6">
             Professional Appliance
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600">
               Services & Solutions
             </span>
-          </h2>
+          </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             We specialize in repair, installation, and maintenance of all major home appliances. 
             Our expert technicians ensure your appliances run efficiently and last longer with premium service quality.
           </p>
         </motion.div>
 
-        {/* Services Grid with Improved Image Proportions */}
+        {/* Services Grid with SEO Optimized Images */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
           {services.map((service, index) => (
             <motion.div
@@ -154,37 +247,38 @@ export function Services() {
               className="group"
             >
               <Card className="h-full overflow-hidden hover:shadow-2xl transition-all duration-500 border-primary/10 hover:border-primary/30 bg-card/50 backdrop-blur-sm">
-                {/* Image Section with Proper Aspect Ratios */}
+                {/* SEO Optimized Image Section */}
                 <div className="relative overflow-hidden">
-                  {/* Container with dynamic aspect ratio based on image orientation */}
-                  <div 
-                    className={`relative w-full ${
-                      service.dimensions.landscape.aspectRatio === '3/2' 
-                        ? 'aspect-[3/2]' 
-                        : 'aspect-[4/3]'
-                    } md:aspect-[3/2]`}
-                  >
-                    {/* Desktop Image */}
+                  <div className="relative w-full aspect-[4/3] md:aspect-[3/2]">
+                    {/* Desktop Image with Next.js optimization */}
                     <div className="hidden md:block relative w-full h-full">
                       <Image
                         src={service.landscapeImage}
-                        alt={service.title}
+                        alt={service.altText.landscape}
                         fill
                         className="object-cover group-hover:scale-110 transition-transform duration-700"
                         sizes="(min-width: 1024px) 50vw, 100vw"
                         priority={index < 2}
+                        quality={75}
+                        loading={index < 2 ? "eager" : "lazy"}
+                        placeholder="blur"
+                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                       />
                     </div>
                     
-                    {/* Mobile Image */}
+                    {/* Mobile Image with Next.js optimization */}
                     <div className="md:hidden relative w-full h-full">
                       <Image
                         src={service.mobileImage}
-                        alt={service.title}
+                        alt={service.altText.mobile}
                         fill
                         className="object-cover group-hover:scale-110 transition-transform duration-700"
                         sizes="100vw"
                         priority={index < 2}
+                        quality={75}
+                        loading={index < 2 ? "eager" : "lazy"}
+                        placeholder="blur"
+                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                       />
                     </div>
                   </div>
@@ -206,9 +300,9 @@ export function Services() {
                   {/* Enhanced Bottom Content */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
                     <div className="mb-3">
-                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 drop-shadow-lg">
-                        {service.title} Service
-                      </h3>
+                      <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 drop-shadow-lg">
+                        {service.title}
+                      </h2>
                       <div className="flex items-center text-white/90">
                         <Wrench className="h-5 w-5 mr-2 drop-shadow" />
                         <span className="text-sm font-medium drop-shadow">Professional Repair & Maintenance</span>
@@ -246,10 +340,10 @@ export function Services() {
                   
                   {/* Comprehensive Features Grid */}
                   <div className="space-y-4">
-                    <h4 className="font-semibold text-foreground flex items-center">
+                    <h3 className="font-semibold text-foreground flex items-center">
                       <CheckCircle className="h-4 w-4 text-primary mr-2" />
                       Common Issues We Fix:
-                    </h4>
+                    </h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {service.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors">
@@ -266,6 +360,7 @@ export function Services() {
                       className={`flex-1 bg-gradient-to-r ${service.color} hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105`}
                       size="sm"
                       onClick={scrollToContact}
+                      aria-label={`Book ${service.category} repair service`}
                     >
                       <Wrench className="h-4 w-4 mr-2" />
                       Book Now
@@ -274,7 +369,8 @@ export function Services() {
                       variant="outline" 
                       size="sm" 
                       className="border-primary/30 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 hover:scale-105"
-                      onClick={() => window.open(`https://wa.me/917068178070?text=Hi, I need ${service.title} service`, '_blank')}
+                      onClick={() => window.open(`https://wa.me/917068178070?text=Hi, I need ${service.title}`, '_blank')}
+                      aria-label={`Contact via WhatsApp for ${service.category} service`}
                     >
                       <MessageCircle className="h-4 w-4 mr-2" />
                       WhatsApp
@@ -294,10 +390,10 @@ export function Services() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-foreground mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-foreground mb-4">
             Why Choose 
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600"> MCS</span>?
-          </h3>
+          </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed">
             We're committed to providing the best appliance repair services with unmatched quality, 
             reliability, and customer satisfaction that exceeds expectations.
@@ -320,9 +416,9 @@ export function Services() {
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br ${item.gradient} mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                     <item.icon className="h-8 w-8 text-white drop-shadow" />
                   </div>
-                  <h4 className="font-bold text-lg mb-3 text-foreground group-hover:text-primary transition-colors">
+                  <h3 className="font-bold text-lg mb-3 text-foreground group-hover:text-primary transition-colors">
                     {item.title}
-                  </h4>
+                  </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     {item.description}
                   </p>
@@ -340,9 +436,9 @@ export function Services() {
           viewport={{ once: true }}
           className="text-center p-8 md:p-12 rounded-2xl bg-gradient-to-br from-primary/10 via-purple-500/10 to-pink-500/10 border border-primary/20 backdrop-blur-sm"
         >
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
             Need Emergency Appliance Repair?
-          </h3>
+          </h2>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto leading-relaxed">
             Don't let broken appliances disrupt your daily routine. Our expert technicians are ready to help you 24/7 
             with professional solutions and guaranteed results.
@@ -353,6 +449,7 @@ export function Services() {
                 size="lg" 
                 className="bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 shadow-xl hover:shadow-2xl transition-all duration-300"
                 onClick={scrollToContact}
+                aria-label="Book appliance repair service now"
               >
                 <Wrench className="mr-2 h-5 w-5" />
                 Book Service Now
@@ -364,6 +461,7 @@ export function Services() {
                 variant="outline" 
                 className="border-primary/30 hover:bg-primary/10 hover:border-primary shadow-lg hover:shadow-xl transition-all duration-300"
                 onClick={() => window.open(`https://wa.me/917068178070?text=Hi, I need emergency appliance repair`, '_blank')}
+                aria-label="Contact emergency service via WhatsApp"
               >
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Emergency WhatsApp

@@ -1,8 +1,8 @@
+// src/components/hero.tsx
 'use client'
 
 import { motion } from 'framer-motion'
 import { Button } from './ui/button'
-import { Badge } from './ui/badge'
 import { MessageCircle, Star, CheckCircle, Wrench, ArrowDown, Zap, Shield } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
@@ -52,12 +52,6 @@ export function Hero() {
     { icon: Zap, text: 'Same Day Service' },
     { icon: Shield, text: '100% Warranty' },
     { icon: CheckCircle, text: 'Expert Technicians' },
-    // Add keyword features for SEO
-    { icon: Wrench, text: 'Fridge Repair Gorakhpur' },
-    { icon: Wrench, text: 'Washing Machine Service Gorakhpur' },
-    { icon: Wrench, text: 'Microwave Repair Gorakhpur' },
-    { icon: Wrench, text: 'AC Installation Gorakhpur' },
-    { icon: CheckCircle, text: 'Local Appliance Repair Near Me' }
   ]
 
   const scrollToContact = () => {
@@ -72,29 +66,31 @@ export function Hero() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Background with Correct Image Proportions */}
+      {/* Background with Updated URLs */}
       <div className="absolute inset-0 z-0">
         {/* Desktop Background - Landscape images */}
         <div className="hidden md:block absolute inset-0">
           <div className="grid grid-cols-2 h-full">
             <div className="relative">
               <Image
-                src="/assets/aclandscape.jpg"
-                alt="AC Repair and Service Gorakhpur"
+                src="https://zacotlplpeionoqfdhxm.supabase.co/storage/v1/object/public/default/acrepairservice.jpg"
+                alt="Professional AC Repair and Installation Services in Gorakhpur MSC"
                 width={1224}
                 height={816}
                 className="object-cover w-full h-full opacity-20"
                 priority
+                loading="eager"
               />
             </div>
             <div className="relative">
               <Image
-                src="/assets/aclandscape2.jpg"
-                alt="AC Installation Gorakhpur"
+                src="https://zacotlplpeionoqfdhxm.supabase.co/storage/v1/object/public/default/acrepairservice2.jpg"
+                alt="Expert AC Service and Maintenance by Gorakhpur MSC Technicians"
                 width={1224}
                 height={816}
                 className="object-cover w-full h-full opacity-20"
                 priority
+                loading="eager"
               />
             </div>
           </div>
@@ -103,12 +99,13 @@ export function Hero() {
         {/* Mobile Background */}
         <div className="md:hidden absolute inset-0">
           <Image
-            src="/assets/acmobile.jpg"
-            alt="Mobile Appliance Services Gorakhpur"
+            src="https://zacotlplpeionoqfdhxm.supabase.co/storage/v1/object/public/default/acrepairservice3.jpg"
+            alt="Gorakhpur MSC Mobile Appliance Services - Fridge, AC, Washing Machine Repair"
             width={816}
             height={1224}
             className="object-cover w-full h-full opacity-15"
             priority
+            loading="eager"
           />
         </div>
 
@@ -145,19 +142,7 @@ export function Hero() {
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-5xl mx-auto">
-          {/* SEO-focused paragraph with keywords */}
-          <motion.p
-            className="hidden md:block text-base md:text-lg font-medium text-muted-foreground mb-7 max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            <span>
-              Get expert <strong>fridge repair</strong>, <strong>washing machine service</strong>, <strong>microwave repair</strong>, <strong>AC installation</strong>, and complete <strong>appliance maintenance</strong> in Gorakhpur and nearby cities. Fast home appliance service, trusted local technicians, and online booking available near you.
-            </span>
-          </motion.p>
-
-          {/* Main Heading */}
+          {/* Main Heading with Enhanced Keywords */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -182,21 +167,17 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-wrap justify-center gap-3 mb-8"
+            className="flex flex-wrap justify-center gap-4 mb-8"
           >
             {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.05 }}
-                className="flex items-center gap-2 bg-muted/80 px-3 py-2 rounded-full text-sm"
-              >
+              <div key={index} className="flex items-center gap-2 bg-muted/80 px-4 py-2 rounded-full">
                 <feature.icon className="h-5 w-5 text-primary" />
-                <span className="font-medium">{feature.text}</span>
-              </motion.div>
+                <span className="text-sm font-medium">{feature.text}</span>
+              </div>
             ))}
           </motion.div>
 
-          {/* Subtitle */}
+          {/* Enhanced Subtitle with Local SEO */}
           <motion.p
             className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
@@ -206,7 +187,7 @@ export function Hero() {
             Your trusted partner for all home appliance repairs, installation, and maintenance services.
             <br className="hidden md:block" />
             <span className="text-primary font-bold">
-              Fridge repair, AC service, washing machine repair & microwave service near you in Gorakhpur.
+              Expert technicians • Quality service • Guaranteed satisfaction
             </span>
           </motion.p>
 
@@ -234,7 +215,7 @@ export function Hero() {
                 variant="outline"
                 className="w-full sm:w-auto h-14 px-8 text-lg font-bold shadow-xl border-2 border-primary/30 hover:bg-primary/10 hover:border-primary transition-all duration-300"
                 onClick={() =>
-                  window.open(`https://wa.me/917068178070?text=Hi, I need help with my appliance`, '_blank')
+                  window.open(`https://wa.me/917068178070?text=Hi, I need help with my appliance repair in Gorakhpur`, '_blank')
                 }
               >
                 <MessageCircle className="mr-3 h-6 w-6" />
@@ -243,11 +224,26 @@ export function Hero() {
             </motion.div>
           </motion.div>
 
+          {/* SEO-focused introduction paragraph - Moved here for better flow */}
+          <motion.div
+            className="mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+          >
+            <p className="text-base md:text-lg font-medium text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+              <strong>Gorakhpur MSC (Machine Care Services)</strong> - Your trusted local experts for 
+              <strong> fridge repair</strong>, <strong>washing machine service</strong>, 
+              <strong> microwave repair</strong>, and <strong>AC installation</strong> in Gorakhpur. 
+              Fast, reliable appliance repair services with certified technicians and same-day service available.
+            </p>
+          </motion.div>
+
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
             className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto mb-30"
           >
             {stats.map((stat, index) => (
@@ -256,7 +252,7 @@ export function Hero() {
                 className="relative group"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -5 }}
               >
                 <div className="text-center p-6 rounded-xl bg-gradient-to-br from-muted/50 to-muted/80 backdrop-blur-sm border border-primary/10 hover:border-primary/30 transition-all duration-300">
@@ -273,7 +269,7 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Enhanced Scroll Indicator */}
+        {/* Scroll Indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

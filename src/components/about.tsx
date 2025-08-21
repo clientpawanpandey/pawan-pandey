@@ -42,7 +42,12 @@ export function About() {
   ]
 
   return (
-    <section id="about" className="py-20 relative overflow-hidden">
+    <section 
+      id="about" 
+      className="py-20 relative overflow-hidden"
+      // SEO: Add semantic HTML and keywords
+      aria-label="About Machine Care Services - Professional appliance repair in Gorakhpur"
+    >
       {/* Enhanced Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -51,7 +56,7 @@ export function About() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-        {/* Header */}
+        {/* Header with SEO-optimized content */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +65,7 @@ export function About() {
           className="text-center mb-16"
         >
           <Badge variant="outline" className="mb-4 px-6 py-2 text-base font-semibold border-primary/30">
-            About MCS
+            About MCS - Gorakhpur Appliance Repair
           </Badge>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-6">
             Your Trusted Appliance Care
@@ -69,13 +74,14 @@ export function About() {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            At Machine Care Services (MCS), we are your one-stop solution for all home appliance needs. 
-            With years of experience and a team of certified technicians, we provide reliable repair, 
-            installation, and maintenance services for all major appliance brands.
+            At Machine Care Services (MCS), we are your one-stop solution for all home appliance needs in Gorakhpur. 
+            With years of experience and a team of certified technicians, we provide reliable refrigerator repair, 
+            washing machine service, AC repair, microwave oven maintenance, and installation services for all major appliance brands 
+            including Samsung, LG, Whirlpool, Haier, and Godrej.
           </p>
         </motion.div>
 
-        {/* Enhanced Stats Row */}
+        {/* Enhanced Stats Row with SEO keywords */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -88,9 +94,11 @@ export function About() {
               key={index}
               className="text-center p-6 rounded-xl bg-gradient-to-br from-muted/40 to-muted/70 border border-primary/10 hover:border-primary/30 transition-all duration-300 backdrop-blur-sm hover:shadow-lg"
               whileHover={{ scale: 1.05, y: -8 }}
+              role="presentation"
+              aria-label={`${service.count} ${service.name}`}
             >
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4 group-hover:scale-110 transition-transform">
-                <service.icon className="h-6 w-6 text-primary" />
+                <service.icon className="h-6 w-6 text-primary" aria-hidden="true" />
               </div>
               <div className="text-2xl md:text-3xl font-black text-foreground mb-1">{service.count}</div>
               <div className="text-sm text-muted-foreground font-medium">{service.name}</div>
@@ -98,9 +106,9 @@ export function About() {
           ))}
         </motion.div>
 
-        {/* Main Content with Improved Image Proportions */}
+        {/* Main Content with SEO-optimized text and updated image links */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* Text Content */}
+          {/* Text Content with SEO keywords */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -109,15 +117,22 @@ export function About() {
             className="space-y-6"
           >
             <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-              Why Choose Gorakhpur's MCS?
+              Why Choose Gorakhpur's Best Appliance Repair Service?
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We understand how important your home appliances are to your daily life. That's why we're 
-              committed to providing fast, reliable, and affordable repair services that you can trust.
+              We understand how important your home appliances are to your daily life. That's why MCS is 
+              committed to providing fast, reliable, and affordable appliance repair services in Gorakhpur and surrounding areas. 
+              Our expert technicians specialize in refrigerator repair, washing machine service, AC installation, 
+              and microwave oven maintenance with same-day service guarantee.
             </p>
             
             <div className="space-y-4">
-              {['Certified & Insured Technicians', 'Same-Day Service Available', 'Warranty on All Repairs', 'Upfront Pricing'].map((item, index) => (
+              {[
+                'Certified & Insured Appliance Technicians', 
+                'Same-Day Repair Service in Gorakhpur', 
+                'Comprehensive Warranty on All Repairs', 
+                'Transparent Upfront Pricing - No Hidden Costs'
+              ].map((item, index) => (
                 <motion.div
                   key={index}
                   className="flex items-center space-x-3"
@@ -127,7 +142,7 @@ export function About() {
                   viewport={{ once: true }}
                 >
                   <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-emerald-600 rounded-full flex items-center justify-center shadow-lg">
-                    <CheckCircle className="h-5 w-5 text-white" />
+                    <CheckCircle className="h-5 w-5 text-white" aria-hidden="true" />
                   </div>
                   <span className="text-foreground font-medium">{item}</span>
                 </motion.div>
@@ -135,7 +150,7 @@ export function About() {
             </div>
           </motion.div>
 
-          {/* Enhanced Images Grid with Proper Aspect Ratios */}
+          {/* Enhanced Images Grid with Updated Supabase URLs and SEO-optimized alt texts */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -146,38 +161,40 @@ export function About() {
             <div className="grid grid-cols-2 gap-4">
               {/* Left Column */}
               <div className="space-y-4">
-                {/* Washing Machine - Portrait Image (816x1224) */}
+                {/* Washing Machine - Using Supabase URL */}
                 <div className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-xl group">
                   <Image
-                    src="/assets/washingmachinemobile.jpg"
-                    alt="Washing Machine Repair"
+                    src="https://zacotlplpeionoqfdhxm.supabase.co/storage/v1/object/public/default/washingmachinemobile.jpg"
+                    alt="Professional washing machine repair service in Gorakhpur - Samsung LG Whirlpool washing machine repair"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                     sizes="(max-width: 768px) 50vw, 25vw"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                   <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="absolute bottom-3 left-3 text-white">
                     <Badge className="bg-orange-600/90 backdrop-blur-sm shadow-lg border-0">
-                      Washing Machine
+                      Washing Machine Repair
                     </Badge>
                   </div>
                 </div>
                 
-                {/* Microwave - Portrait Image (816x1224) */}
+                {/* Microwave - Using Supabase URL */}
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl group">
                   <Image
-                    src="/assets/microwavemobile.jpg"
-                    alt="Microwave Repair"
+                    src="https://zacotlplpeionoqfdhxm.supabase.co/storage/v1/object/public/default/microwaverepairservice2.jpg"
+                    alt="Expert microwave oven repair service Gorakhpur - Samsung LG IFB microwave repair and maintenance"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                     sizes="(max-width: 768px) 50vw, 25vw"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="absolute bottom-2 left-2 text-white">
                     <Badge className="bg-purple-600/90 backdrop-blur-sm shadow-lg border-0 text-xs">
-                      Microwave
+                      Microwave Oven Service
                     </Badge>
                   </div>
                 </div>
@@ -185,38 +202,40 @@ export function About() {
 
               {/* Right Column - Offset with padding-top */}
               <div className="space-y-4 pt-6">
-                {/* Refrigerator - Portrait Image (816x1224) */}
+                {/* Refrigerator - Using Supabase URL */}
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl group">
                   <Image
-                    src="/assets/refrigeratormobile.jpg"
-                    alt="Refrigerator Repair"
+                    src="https://zacotlplpeionoqfdhxm.supabase.co/storage/v1/object/public/default/refrigeratormobile.jpg"
+                    alt="Professional refrigerator repair service Gorakhpur - Samsung LG Whirlpool Haier fridge repair and gas filling"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                     sizes="(max-width: 768px) 50vw, 25vw"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                   <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="absolute bottom-2 left-2 text-white">
                     <Badge className="bg-green-600/90 backdrop-blur-sm shadow-lg border-0 text-xs">
-                      Refrigerator
+                      Refrigerator Repair
                     </Badge>
                   </div>
                 </div>
                 
-                {/* AC - Landscape Image (1224x816) */}
+                {/* AC - Using Supabase URL */}
                 <div className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-xl group">
                   <Image
-                    src="/assets/acmobile.jpg"
-                    alt="AC Repair"
+                    src="https://zacotlplpeionoqfdhxm.supabase.co/storage/v1/object/public/default/acrepairservice3.jpg"
+                    alt="Best AC repair service Gorakhpur - Split AC window AC repair installation gas refilling service"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                     sizes="(max-width: 768px) 50vw, 25vw"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="absolute bottom-3 left-3 text-white">
                     <Badge className="bg-blue-600/90 backdrop-blur-sm shadow-lg border-0">
-                      Air Conditioner
+                      AC Repair & Installation
                     </Badge>
                   </div>
                 </div>
@@ -229,7 +248,7 @@ export function About() {
           </motion.div>
         </div>
 
-        {/* Enhanced Features Grid */}
+        {/* Enhanced Features Grid with SEO keywords */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <motion.div
@@ -242,7 +261,7 @@ export function About() {
               <Card className="h-full group hover:shadow-2xl transition-all duration-300 border-primary/10 hover:border-primary/30 hover:bg-muted/30 backdrop-blur-sm">
                 <CardHeader className="text-center pb-4">
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br ${feature.color} mb-4 mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                    <feature.icon className="h-8 w-8 text-white drop-shadow" />
+                    <feature.icon className="h-8 w-8 text-white drop-shadow" aria-hidden="true" />
                   </div>
                   <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors">
                     {feature.title}
@@ -256,6 +275,22 @@ export function About() {
               </Card>
             </motion.div>
           ))}
+        </div>
+
+        {/* SEO-friendly structured data content */}
+        <div className="sr-only" aria-hidden="true">
+          <h4>Gorakhpur Appliance Repair Services</h4>
+          <p>
+            Machine Care Services provides expert appliance repair in Gorakhpur including refrigerator repair, 
+            washing machine service, AC repair, microwave oven repair, and installation services. 
+            We service all major brands like Samsung, LG, Whirlpool, Haier, Godrej, IFB, and more. 
+            Our certified technicians offer same-day service, 24/7 emergency repair, and comprehensive warranties.
+          </p>
+          <p>
+            Keywords: Gorakhpur appliance repair, refrigerator repair Gorakhpur, washing machine service Gorakhpur, 
+            AC repair Gorakhpur, microwave repair Gorakhpur, home appliance repair near me, 
+            same day appliance repair, certified appliance technicians, appliance installation service
+          </p>
         </div>
       </div>
     </section>
