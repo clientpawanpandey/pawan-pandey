@@ -209,7 +209,7 @@ export function Contact() {
             <div className="grid grid-cols-3 h-full">
               <div className="relative">
                 <Image
-                  src="/assets/washingmachinemobile.jpg"
+                  src="https://zacotlplpeionoqfdhxm.supabase.co/storage/v1/object/public/default/washingmachinemobile.jpg"
                   alt="Professional washing machine repair services in Gorakhpur"
                   width={816}
                   height={1224}
@@ -221,7 +221,7 @@ export function Contact() {
               <div className="relative bg-gradient-to-b from-primary/20 to-secondary/20" />
               <div className="relative">
                 <Image
-                  src="/assets/microwavelandscape.jpg"
+                  src="https://zacotlplpeionoqfdhxm.supabase.co/storage/v1/object/public/default/microwaverepairservice.jpg"
                   alt="Expert microwave oven repair services in Gorakhpur"
                   width={1224}
                   height={816}
@@ -236,7 +236,7 @@ export function Contact() {
           {/* Mobile Background */}
           <div className="lg:hidden absolute inset-0 opacity-5">
             <Image
-              src="/assets/acmobile.jpg"
+              src="https://zacotlplpeionoqfdhxm.supabase.co/storage/v1/object/public/default/acrepairservice.jpg"
               alt="Air conditioner repair services contact"
               width={1224}
               height={816}
@@ -587,7 +587,7 @@ export function Contact() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative h-32 rounded-lg overflow-hidden shadow-lg group">
                   <Image
-                    src="/assets/refrigeratormobile.jpg"
+                    src="https://zacotlplpeionoqfdhxm.supabase.co/storage/v1/object/public/default/refrigeratormobile.jpg"
                     alt="Professional refrigerator repair service in Gorakhpur by certified technicians"
                     width={816}
                     height={1224}
@@ -602,7 +602,7 @@ export function Contact() {
                 </div>
                 <div className="relative h-32 rounded-lg overflow-hidden shadow-lg group">
                   <Image
-                    src="/assets/acmobile.jpg"
+                    src="https://zacotlplpeionoqfdhxm.supabase.co/storage/v1/object/public/default/acrepairservice.jpg"
                     alt="Expert air conditioner repair and maintenance service in Gorakhpur"
                     width={1224}
                     height={816}
