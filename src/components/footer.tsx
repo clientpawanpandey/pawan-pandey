@@ -12,6 +12,7 @@ export function Footer() {
     'Washing Machine Service & Maintenance',
     'Microwave Oven Repair',
     'Air Conditioner Service & Gas Filling',
+    // Add more SEO queries here if you wish (for example, "Fridge Service Near Me Gorakhpur", "AC Repair Near Me", etc.).
   ]
 
   const features = [
@@ -45,29 +46,38 @@ export function Footer() {
             <div className="space-y-4 lg:col-span-1">
               <div className="flex items-center space-x-3">
                 <div className="w-12 h-12 bg-gradient-to-br from-primary to-purple-600 rounded-lg flex items-center justify-center shadow-lg">
-                  <Wrench className="h-7 w-7 text-white" />
+                  <Wrench className="h-7 w-7 text-white" aria-label="Appliance Repair Icon" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-black text-foreground">Gorakhpur Services</h3>
                   <Badge variant="secondary" className="text-xs font-medium">Machine Care Services</Badge>
                 </div>
               </div>
+              {/* SEO Text Block */}
+              <div className="sr-only">
+                Refrigerator repair, fridge service near me, washing machine repair, microwave repair, AC installation and appliance maintenance in Gorakhpur & nearby areas. Fast, professional appliance care and urgent service available.
+              </div>
               <p className="text-muted-foreground leading-relaxed text-sm">
-                Your trusted partner for all home appliance repairs, installation, and maintenance services. 
-                Professional quality service since 2019 with guaranteed customer satisfaction.
+                Your trusted partner for all <b>home appliance repairs in Gorakhpur</b>, installation, and maintenance. We offer <b>fridge repair</b>, <b>washing machine service</b>, <b>microwave oven repair</b>, and <b>AC installation</b> in Gorakhpur and surrounding cities. Professional quality service since 2019 with guaranteed customer satisfaction.
               </p>
-              
+
               {/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-sm">
                   <div className="w-8 h-8 bg-green-500/10 rounded-full flex items-center justify-center">
-                    <Phone className="h-4 w-4 text-green-600" />
+                    <Phone className="h-4 w-4 text-green-600" aria-label="Call now" />
                   </div>
-                  <span className="text-foreground font-semibold">7068178070</span>
+                  <a
+                    href="tel:7068178070"
+                    className="text-foreground font-semibold hover:text-primary transition-colors"
+                    aria-label="Call appliance technician Gorakhpur"
+                  >
+                    7068178070
+                  </a>
                 </div>
                 <div className="flex items-center space-x-3 text-sm">
                   <div className="w-8 h-8 bg-blue-500/10 rounded-full flex items-center justify-center">
-                    <MessageCircle className="h-4 w-4 text-blue-600" />
+                    <MessageCircle className="h-4 w-4 text-blue-600" aria-label="WhatsApp" />
                   </div>
                   <span className="text-muted-foreground">WhatsApp Available 24/7</span>
                 </div>
@@ -89,6 +99,8 @@ export function Footer() {
                     </div>
                   </li>
                 ))}
+                {/* More keywords for service SEO */}
+                <li className="sr-only">fridge technician near me Gorakhpur, emergency appliance repair, AC repair near me, best home appliance services in Gorakhpur</li>
               </ul>
               
               <div className="pt-2">
@@ -119,12 +131,14 @@ export function Footer() {
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors group cursor-pointer">
                     <div className="w-8 h-8 bg-muted-foreground/10 rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
-                      <feature.icon className={`h-4 w-4 ${feature.color}`} />
+                      <feature.icon className={`h-4 w-4 ${feature.color}`} aria-label={feature.text} />
                     </div>
                     <span>{feature.text}</span>
                   </div>
                 ))}
               </div>
+              {/* Semantic HTML for feature keywords */}
+              <span className="sr-only">local appliance repair, fast fridge repair, same day washing machine service, verified microwave technician Gorakhpur</span>
             </div>
 
             {/* Contact & Quick Links */}
@@ -163,6 +177,7 @@ export function Footer() {
                   className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:opacity-90 shadow-lg text-xs font-semibold"
                   size="sm"
                   onClick={() => window.open(`https://wa.me/917068178070?text=Hi, I need appliance service`, '_blank')}
+                  aria-label="WhatsApp Gorakhpur Appliance Service"
                 >
                   <MessageCircle className="mr-2 h-3 w-3" />
                   WhatsApp Now
@@ -180,7 +195,13 @@ export function Footer() {
                 <Badge variant="destructive" className="bg-red-600 animate-pulse">
                   Emergency 24/7
                 </Badge>
-                <span className="font-semibold text-foreground">7068178070</span>
+                <a 
+                  href="tel:7068178070" 
+                  className="font-semibold text-foreground hover:text-primary transition-all" 
+                  aria-label="Call emergency repair Gorakhpur"
+                >
+                  7068178070
+                </a>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Badge variant="secondary">Licensed & Insured</Badge>
@@ -200,7 +221,7 @@ export function Footer() {
                 &copy; 2025 Gorakhpur - Machine Care Services. All rights reserved.
               </p>
               <p className="text-muted-foreground text-xs mt-1">
-                Professional appliance repair services with guaranteed satisfaction
+                Professional <b>appliance repair services</b>: fridge repair, washing machine service, microwave repair, AC service in Gorakhpur and nearby.
               </p>
             </div>
             

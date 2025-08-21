@@ -52,12 +52,18 @@ export function Hero() {
     { icon: Zap, text: 'Same Day Service' },
     { icon: Shield, text: '100% Warranty' },
     { icon: CheckCircle, text: 'Expert Technicians' },
+    // Add keyword features for SEO
+    { icon: Wrench, text: 'Fridge Repair Gorakhpur' },
+    { icon: Wrench, text: 'Washing Machine Service Gorakhpur' },
+    { icon: Wrench, text: 'Microwave Repair Gorakhpur' },
+    { icon: Wrench, text: 'AC Installation Gorakhpur' },
+    { icon: CheckCircle, text: 'Local Appliance Repair Near Me' }
   ]
 
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact')
     if (contactSection) {
-      contactSection.scrollIntoView({ 
+      contactSection.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
       })
@@ -68,13 +74,13 @@ export function Hero() {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background with Correct Image Proportions */}
       <div className="absolute inset-0 z-0">
-        {/* Desktop Background - Landscape images (1224x816) */}
+        {/* Desktop Background - Landscape images */}
         <div className="hidden md:block absolute inset-0">
           <div className="grid grid-cols-2 h-full">
             <div className="relative">
               <Image
                 src="/assets/aclandscape.jpg"
-                alt="Air Conditioner Service"
+                alt="AC Repair and Service Gorakhpur"
                 width={1224}
                 height={816}
                 className="object-cover w-full h-full opacity-20"
@@ -84,7 +90,7 @@ export function Hero() {
             <div className="relative">
               <Image
                 src="/assets/aclandscape2.jpg"
-                alt="AC Installation Service"
+                alt="AC Installation Gorakhpur"
                 width={1224}
                 height={816}
                 className="object-cover w-full h-full opacity-20"
@@ -94,11 +100,11 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Mobile Background - Mobile images (816x1224) */}
+        {/* Mobile Background */}
         <div className="md:hidden absolute inset-0">
           <Image
             src="/assets/acmobile.jpg"
-            alt="Appliance Services"
+            alt="Mobile Appliance Services Gorakhpur"
             width={816}
             height={1224}
             className="object-cover w-full h-full opacity-15"
@@ -109,8 +115,6 @@ export function Hero() {
         {/* Gradient Overlays */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/90 to-background/70" />
-        
-        {/* Animated Gradient */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-purple-600/5 to-pink-600/5 animate-pulse" />
 
         {/* Floating Particles */}
@@ -141,7 +145,17 @@ export function Hero() {
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-5xl mx-auto">
-          
+          {/* SEO-focused paragraph with keywords */}
+          <motion.p
+            className="hidden md:block text-base md:text-lg font-medium text-muted-foreground mb-7 max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <span>
+              Get expert <strong>fridge repair</strong>, <strong>washing machine service</strong>, <strong>microwave repair</strong>, <strong>AC installation</strong>, and complete <strong>appliance maintenance</strong> in Gorakhpur and nearby cities. Fast home appliance service, trusted local technicians, and online booking available near you.
+            </span>
+          </motion.p>
 
           {/* Main Heading */}
           <motion.div
@@ -168,22 +182,22 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-wrap justify-center gap-4 mb-8"
+            className="flex flex-wrap justify-center gap-3 mb-8"
           >
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.05 }}
-                className="flex items-center gap-2 bg-muted/80 px-4 py-2 rounded-full"
+                className="flex items-center gap-2 bg-muted/80 px-3 py-2 rounded-full text-sm"
               >
                 <feature.icon className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium">{feature.text}</span>
+                <span className="font-medium">{feature.text}</span>
               </motion.div>
             ))}
           </motion.div>
 
           {/* Subtitle */}
-          <motion.p 
+          <motion.p
             className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -191,7 +205,9 @@ export function Hero() {
           >
             Your trusted partner for all home appliance repairs, installation, and maintenance services.
             <br className="hidden md:block" />
-            <span className="text-primary font-bold">Expert technicians • Quality service • Guaranteed satisfaction</span>
+            <span className="text-primary font-bold">
+              Fridge repair, AC service, washing machine repair & microwave service near you in Gorakhpur.
+            </span>
           </motion.p>
 
           {/* Action Buttons */}
@@ -201,12 +217,9 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
           >
-            <motion.div
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button 
-                size="lg" 
+            <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
+              <Button
+                size="lg"
                 className="w-full sm:w-auto h-14 px-8 text-lg font-bold shadow-2xl bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 transition-all duration-300"
                 onClick={scrollToContact}
               >
@@ -214,16 +227,15 @@ export function Hero() {
                 Book Now
               </Button>
             </motion.div>
-            
-            <motion.div
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button 
-                size="lg" 
-                variant="outline" 
+
+            <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
+              <Button
+                size="lg"
+                variant="outline"
                 className="w-full sm:w-auto h-14 px-8 text-lg font-bold shadow-xl border-2 border-primary/30 hover:bg-primary/10 hover:border-primary transition-all duration-300"
-                onClick={() => window.open(`https://wa.me/917068178070?text=Hi, I need help with my appliance`, '_blank')}
+                onClick={() =>
+                  window.open(`https://wa.me/917068178070?text=Hi, I need help with my appliance`, '_blank')
+                }
               >
                 <MessageCircle className="mr-3 h-6 w-6" />
                 WhatsApp Us
@@ -248,7 +260,9 @@ export function Hero() {
                 whileHover={{ scale: 1.05, y: -5 }}
               >
                 <div className="text-center p-6 rounded-xl bg-gradient-to-br from-muted/50 to-muted/80 backdrop-blur-sm border border-primary/10 hover:border-primary/30 transition-all duration-300">
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br ${stat.color} mb-4 shadow-lg`}>
+                  <div
+                    className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br ${stat.color} mb-4 shadow-lg`}
+                  >
                     <stat.icon className="h-8 w-8 text-white" />
                   </div>
                   <div className="text-3xl md:text-4xl font-black text-foreground mb-1">{stat.value}</div>
@@ -267,9 +281,7 @@ export function Hero() {
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
           onClick={scrollToContact}
         >
-          <motion.div
-            className="flex flex-col items-center text-primary scroll-indicator hover:text-primary/80 transition-colors"
-          >
+          <motion.div className="flex flex-col items-center text-primary scroll-indicator hover:text-primary/80 transition-colors">
             <span className="text-sm font-medium mb-2">Scroll to explore</span>
             <div className="w-6 h-10 border-2 border-primary/50 rounded-full flex justify-center p-1">
               <ArrowDown className="h-4 w-4 animate-bounce" />
